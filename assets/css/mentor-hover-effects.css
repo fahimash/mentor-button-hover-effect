@@ -502,7 +502,10 @@
   background: #D30C5E;
 }
 .mentor-button-hover-effect-27:hover:after,
-.mentor-button-hover-effect-28:hover:after {
+.mentor-button-hover-effect-28:hover:after,
+.mentor-button-hover-effect-45:hover:after,
+.mentor-button-hover-effect-46:hover:after,
+.mentor-button-hover-effect-47:hover:after {
   transition: 0.5s;
   background: #D30C5E;
   transform: scale(2);
@@ -573,13 +576,7 @@
 .mentor-button-hover-effect-41:hover::after,
 .mentor-button-hover-effect-42:hover::after,
 .mentor-button-hover-effect-43:hover::after,
-.mentor-button-hover-effect-44:hover::after,
-.mentor-button-hover-effect-45:hover::after,
-.mentor-button-hover-effect-46:hover::after,
-.mentor-button-hover-effect-47:hover::after,
-.mentor-button-hover-effect-48:hover::after,
-.mentor-button-hover-effect-49:hover::after,
-.mentor-button-hover-effect-50:hover::after {
+.mentor-button-hover-effect-44:hover::after {
   transform: scale(0);
 }
 
@@ -902,4 +899,101 @@
 .mentor-button-hover-effect-40 .design-helper:after {
   left: -5px;
   transform: rotate(-135deg);
+}
+
+.mentor-button-hover-effect-45:before, .mentor-button-hover-effect-45:after,
+.mentor-button-hover-effect-46:before, .mentor-button-hover-effect-46:after,
+.mentor-button-hover-effect-47:before, .mentor-button-hover-effect-47:after {
+  --corner: 4px;
+  content: '';
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  left: 2px;
+  right: 2px;
+  background: #222;
+  clip-path: polygon(var(--corner) 0%, calc(100% - var(--corner)) 0%, 100% var(--corner), 100% calc(100% - var(--corner)), calc(100% - var(--corner)) 100%, var(--corner) 100%, 0% calc(100% - var(--corner)), 0% var(--corner));
+  z-index: -1;
+}
+
+.mentor-button-hover-effect-45:before,
+.mentor-button-hover-effect-46:before,
+.mentor-button-hover-effect-47:before {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #D30C5E;
+}
+
+
+
+.mentor-button-hover-effect-45 .design-helper:before, .mentor-button-hover-effect-45 .design-helper::after, .mentor-button-hover-effect-45 .design-helper-2:before, .mentor-button-hover-effect-45 .design-helper-2::after {
+  --corner: 4px;
+  content: '';
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background: #D30C5E;
+  top: -2px;
+  left: -2px;
+  z-index: -1;
+  -webkit-clip-path: polygon(var(--corner) 0%, calc(100% - var(--corner)) 0%, 100% var(--corner), 100% calc(100% - var(--corner)), calc(100% - var(--corner)) 100%, var(--corner) 100%, 0% calc(100% - var(--corner)), 0% var(--corner));
+  clip-path: polygon(var(--corner) 0%, calc(100% - var(--corner)) 0%, 100% var(--corner), 100% calc(100% - var(--corner)), calc(100% - var(--corner)) 100%, var(--corner) 100%, 0% calc(100% - var(--corner)), 0% var(--corner));
+}
+
+.mentor-button-hover-effect-45 .design-helper::after {
+  left: unset;
+  right: -2px;
+}
+
+.mentor-button-hover-effect-45 .design-helper-2::before {
+  bottom: -2px;
+  top: unset;
+}
+.mentor-button-hover-effect-45 .design-helper-2::after {
+  top: unset;
+  bottom: -2px;
+  right: -2px;
+  left: unset;
+}
+
+.mentor-button-hover-effect-47 .design-helper:before, .mentor-button-hover-effect-47 .design-helper:after, .mentor-button-hover-effect-47 .design-helper-2:before, .mentor-button-hover-effect-47 .design-helper-2:after {
+  --corner: 4px;
+  content: '';
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  background: #D30C5E;
+  top: -3px;
+  left: -3px;
+  z-index: -1;
+  -webkit-clip-path: polygon(var(--corner) 0%, calc(100% - var(--corner)) 0%, 100% var(--corner), 100% calc(100% - var(--corner)), calc(100% - var(--corner)) 100%, var(--corner) 100%, 0% calc(100% - var(--corner)), 0% var(--corner));
+  clip-path: polygon(var(--corner) 0%, calc(100% - var(--corner)) 0%, 100% var(--corner), 100% calc(100% - var(--corner)), calc(100% - var(--corner)) 100%, var(--corner) 100%, 0% calc(100% - var(--corner)), 0% var(--corner));
+}
+
+.mentor-button-hover-effect-47 .design-helper:after {
+  left: unset;
+  right: -3px;
+}
+.mentor-button-hover-effect-47 .design-helper-2:before {
+  bottom: -3px;
+  top: unset;
+}
+.mentor-button-hover-effect-47 .design-helper-2:after {
+  top: unset;
+  bottom: -3px;
+  right: -3px;
+  left: unset;
+}
+
+.mentor-button-hover-effect-48 {
+  transition: 0.3s;
+  background: #D30C5E;
+  border: 4px solid #D30C5E;
+  box-shadow: inset 0 0 0 2px white;
+}
+.mentor-button-hover-effect-48:hover {
+  color: #D30C5E;
+  background: white;
 }
