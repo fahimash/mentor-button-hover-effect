@@ -37,7 +37,18 @@
 .mentor-button-hover-effect-37,
 .mentor-button-hover-effect-38,
 .mentor-button-hover-effect-39,
-.mentor-button-hover-effect-40{
+.mentor-button-hover-effect-40,
+.mentor-button-hover-effect-41,
+.mentor-button-hover-effect-42,
+.mentor-button-hover-effect-43,
+.mentor-button-hover-effect-44,
+.mentor-button-hover-effect-45,
+.mentor-button-hover-effect-46,
+.mentor-button-hover-effect-47,
+.mentor-button-hover-effect-48,
+.mentor-button-hover-effect-49,
+.mentor-button-hover-effect-40
+{
 	position: relative;
 	background: none;
 	border: 4px solid #d30c5c;
@@ -411,7 +422,17 @@
 .mentor-button-hover-effect-37, 
 .mentor-button-hover-effect-38, 
 .mentor-button-hover-effect-39, 
-.mentor-button-hover-effect-40 {
+.mentor-button-hover-effect-40,
+.mentor-button-hover-effect-41, 
+.mentor-button-hover-effect-42, 
+.mentor-button-hover-effect-43, 
+.mentor-button-hover-effect-44, 
+.mentor-button-hover-effect-45, 
+.mentor-button-hover-effect-46, 
+.mentor-button-hover-effect-47, 
+.mentor-button-hover-effect-48, 
+.mentor-button-hover-effect-49, 
+.mentor-button-hover-effect-50 {
   border: unset;
   outline: unset;
   text-decoration: unset;
@@ -544,7 +565,21 @@
 .mentor-button-hover-effect-33:hover::after,
 .mentor-button-hover-effect-34:hover::after,
 .mentor-button-hover-effect-35:hover::after,
-.mentor-button-hover-effect-36:hover::after {
+.mentor-button-hover-effect-36:hover::after,
+.mentor-button-hover-effect-37:hover::after,
+.mentor-button-hover-effect-38:hover::after,
+.mentor-button-hover-effect-39:hover::after,
+.mentor-button-hover-effect-40:hover::after,
+.mentor-button-hover-effect-41:hover::after,
+.mentor-button-hover-effect-42:hover::after,
+.mentor-button-hover-effect-43:hover::after,
+.mentor-button-hover-effect-44:hover::after,
+.mentor-button-hover-effect-45:hover::after,
+.mentor-button-hover-effect-46:hover::after,
+.mentor-button-hover-effect-47:hover::after,
+.mentor-button-hover-effect-48:hover::after,
+.mentor-button-hover-effect-49:hover::after,
+.mentor-button-hover-effect-50:hover::after {
   transform: scale(0);
 }
 
@@ -702,4 +737,169 @@
   transform: rotate(-45deg);
   top: 3px;
   left: -5px;
+}
+
+.mentor-button-hover-effect-37:before, .mentor-button-hover-effect-37:after,
+.mentor-button-hover-effect-41:before, .mentor-button-hover-effect-41:after {
+  --corner: 18px;
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: #222;
+  z-index: -1;
+  transition: 0.3s;
+  clip-path: polygon(var(--corner) 0%, 100% 0%, 100% var(--corner), 100% calc(100% - var(--corner)), calc(100% - var(--corner)) 100%, var(--corner) 100%, 0% 100%, 0% var(--corner));
+}
+.mentor-button-hover-effect-37:before,
+.mentor-button-hover-effect-41:before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  background: #D30C5E;
+}
+
+.mentor-button-hover-effect-37 .design-helper:before, 
+.mentor-button-hover-effect-37 .design-helper:after {
+  content: '';
+  position: absolute;
+  height: 6px;
+  width: 22px;
+  background: #D30C5E;
+  clip-path: polygon(5px 0%, calc(100% - 5px) 0%, 100% 100%, 0% 100%);
+  transform: rotate(45deg);
+  top: 3px;
+  right: -6px;
+}
+.mentor-button-hover-effect-37 .design-helper:before {
+  right: unset;
+  left: -5px;
+  transform: rotate(-45deg);
+}
+.mentor-button-hover-effect-37 .design-helper:after {
+  top: unset;
+  bottom: 3px;
+  transform: rotate(135deg);
+}
+
+.mentor-button-hover-effect-38:before, .mentor-button-hover-effect-38:after,
+.mentor-button-hover-effect-42:before, .mentor-button-hover-effect-42:after {
+  --corner: 15px;
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: #222;
+  z-index: -1;
+  transition: 0.3s;
+  clip-path: polygon(0% 0%, calc(100% - var(--corner)) 0%, 100% var(--corner), 100% 100%, calc(100% - var(--corner)) 100%, var(--corner) 100%, 0% calc(100% - var(--corner)), 0% var(--corner));
+}
+.mentor-button-hover-effect-38:before,
+.mentor-button-hover-effect-42:before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  background: #D30C5E;
+}
+.mentor-button-hover-effect-38 .design-helper:after, .mentor-button-hover-effect-38 .design-helper:before {
+  content: '';
+  position: absolute;
+  height: 5px;
+  width: 20px;
+  background: #D30C5E;
+  clip-path: polygon(5px 0%, calc(100% - 5px) 0%, 100% 100%, 0% 100%);
+  transform: rotate(45deg);
+  top: 2px;
+  right: -5px;
+}
+.mentor-button-hover-effect-38 .design-helper:after {
+  top: unset;
+  bottom: 2px;
+  left: -5px;
+  transform: rotate(-135deg);
+}
+
+.mentor-button-hover-effect-39:before, .mentor-button-hover-effect-39:after,
+.mentor-button-hover-effect-43:before, .mentor-button-hover-effect-43:after {
+  --corner: 15px;
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: #222;
+  z-index: -1;
+  transition: 0.3s;
+  clip-path: polygon(var(--corner) 0%, calc(100% - var(--corner)) 0%, 100% var(--corner), 100% 100%, 0 100%, 0 var(--corner));
+}
+.mentor-button-hover-effect-39:before,
+.mentor-button-hover-effect-43:before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  background: #D30C5E;
+}
+
+.mentor-button-hover-effect-39 .design-helper:after, .mentor-button-hover-effect-39 .design-helper:before {
+  content: '';
+  position: absolute;
+  height: 5px;
+  width: 20px;
+  background: #D30C5E;
+  clip-path: polygon(5px 0%, calc(100% - 5px) 0%, 100% 100%, 0% 100%);
+  transform: rotate(45deg);
+  top: 2px;
+  right: -5px;
+}
+
+.mentor-button-hover-effect-39 .design-helper:after {
+  left: -5px;
+  transform: rotate(-45deg);
+}
+
+.mentor-button-hover-effect-40:before, .mentor-button-hover-effect-40:after,
+.mentor-button-hover-effect-44:before, .mentor-button-hover-effect-44:after {
+  --corner: 15px;
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: #222;
+  z-index: -1;
+  transition: 0.3s;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--corner)), calc(100% - var(--corner)) 100%, var(--corner) 100%, 0 calc(100% - var(--corner)));
+}
+.mentor-button-hover-effect-40:before,
+.mentor-button-hover-effect-44:before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  background: #D30C5E;
+}
+
+.mentor-button-hover-effect-40 .design-helper:after, .mentor-button-hover-effect-40 .design-helper:before {
+  content: '';
+  position: absolute;
+  height: 5px;
+  width: 20px;
+  background: #D30C5E;
+  clip-path: polygon(5px 0%, calc(100% - 5px) 0%, 100% 100%, 0% 100%);
+  transform: rotate(135deg);
+  bottom: 2px;
+  right: -5px;
+}
+.mentor-button-hover-effect-40 .design-helper:after {
+  left: -5px;
+  transform: rotate(-135deg);
 }
