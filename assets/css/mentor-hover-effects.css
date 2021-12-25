@@ -33,7 +33,6 @@
 	border: 4px solid #d30c5c;
 	z-index: 10;
 	transition: 0.8s;
-  overflow: hidden;
 }
 .mentor-button-hover-effect-16,
 .mentor-button-hover-effect-17 {
@@ -386,3 +385,106 @@
   top: auto;
   bottom: 0;
 } 
+
+.mentor-button-hover-effect-25,
+.mentor-button-hover-effect-26,
+.mentor-button-hover-effect-27,
+.mentor-button-hover-effect-28 {
+  border: unset;
+  outline: unset;
+  text-decoration: unset;
+  text-align: center;
+}
+
+.mentor-button-hover-effect-25::before, 
+.mentor-button-hover-effect-25::after {
+  content: '';
+  --corner: 10px;
+  background: #D30C5E;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  transition: 0.25s;
+  clip-path: polygon(var(--corner) 0%, 100% 0, 100% calc(100% - var(--corner)), calc(100% - var(--corner)) 100%, 0 100%, 0 var(--corner));
+}
+.mentor-button-hover-effect-25:hover::before {
+  background: #bfbfbf;
+  top: 3px;
+  left: 3px;
+}
+
+.mentor-button-hover-effect-26::after, 
+.mentor-button-hover-effect-26::before {
+  content: '';
+  --corner: 13px;
+  background: #D30C5E;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  transition: 0.25s;
+  clip-path: polygon(0 0, calc(100% - var(--corner)) 0%, 100% var(--corner), 100% 100%, var(--corner) 100%, 0 calc(100% - var(--corner)));
+}
+
+.mentor-button-hover-effect-26:hover::before {
+  background: #bfbfbf;
+  top: 3px;
+  left: -3px;
+}
+
+.mentor-button-hover-effect-27:after, 
+.mentor-button-hover-effect-27:before {
+  content: '';
+  --corner: 10px;
+  background: #222;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  clip-path: polygon(var(--corner) 0%, 100% 0, 100% calc(100% - var(--corner)), calc(100% - var(--corner)) 100%, 0 100%, 0 var(--corner));
+}
+
+.mentor-button-hover-effect-27:before {
+  top: -4.2px;
+  left: -4.2px;
+  right: -4.2px;
+  bottom: -4.2px;
+  background: #D30C5E;
+}
+.mentor-button-hover-effect-27:hover:after,
+.mentor-button-hover-effect-28:hover:after {
+  transition: 0.5s;
+  background: #D30C5E;
+  transform: scale(2);
+  opacity: 0;
+}
+
+
+.mentor-button-hover-effect-28:after, 
+.mentor-button-hover-effect-28:before {
+  content: '';
+  --corner: 10px;
+  background: #222;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+  clip-path: polygon(0 0, calc(100% - var(--corner)) 0%, 100% var(--corner), 100% 100%, var(--corner) 100%, 0 calc(100% - var(--corner)));
+}
+
+.mentor-button-hover-effect-28:before {
+  top: -4.2px;
+  left: -4.2px;
+  right: -4.2px;
+  bottom: -4.2px;
+  background: #D30C5E;
+}
