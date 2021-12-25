@@ -389,7 +389,9 @@
 .mentor-button-hover-effect-25,
 .mentor-button-hover-effect-26,
 .mentor-button-hover-effect-27,
-.mentor-button-hover-effect-28 {
+.mentor-button-hover-effect-28,
+.mentor-button-hover-effect-29,
+.mentor-button-hover-effect-30 {
   border: unset;
   outline: unset;
   text-decoration: unset;
@@ -487,4 +489,90 @@
   right: -4.2px;
   bottom: -4.2px;
   background: #D30C5E;
+}
+
+.mentor-button-hover-effect-29:before, 
+.mentor-button-hover-effect-29:after {
+  --corner: 18px;
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: #222;
+  clip-path: polygon(calc(100% - var(--corner)) 0, 100% var(--corner), 100% 100%, 0 100%, 0 0);
+  z-index: -1;
+  transition: 0.3s;
+}
+
+.mentor-button-hover-effect-29:before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  background: #D30C5E;
+}
+
+.mentor-button-hover-effect-29:hover::after,
+.mentor-button-hover-effect-30:hover::after {
+  transform: scale(0);
+}
+
+.mentor-button-hover-effect-29 .design-helper:before,
+.mentor-button-hover-effect-30 .design-helper:before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  left: -7px;
+  background: #D30C5E;
+  width: 5px;
+  top: 0;
+}
+
+.mentor-button-hover-effect-29 .design-helper:after {
+  content: '';
+  position: absolute;
+  height: 6px;
+  width: 22px;
+  background: #D30C5E;
+  clip-path: polygon(5px 0%, calc(100% - 5px) 0%, 100% 100%, 0% 100%);
+  transform: rotate(45deg);
+  top: 3px;
+  right: -6px;
+}
+
+.mentor-button-hover-effect-30:before, 
+.mentor-button-hover-effect-30:after {
+  --corner: 18px;
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  right: 2px;
+  bottom: 2px;
+  background: #222;
+  clip-path: polygon(100% 0, 100% calc(100% - var(--corner)), calc(100% - var(--corner)) 100%, 0 100%, 0 0);
+  z-index: -1;
+  transition: 0.3s;
+}
+
+.mentor-button-hover-effect-30:before {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  background: #D30C5E;
+}
+
+.mentor-button-hover-effect-30 .design-helper:after {
+  content: '';
+  position: absolute;
+  height: 6px;
+  width: 22px;
+  background: #D30C5E;
+  clip-path: polygon(5px 0%, calc(100% - 5px) 0%, 100% 100%, 0% 100%);
+  transform: rotate(135deg);
+  bottom: 3px;
+  right: -6px;
 }
