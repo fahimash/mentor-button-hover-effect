@@ -1,0 +1,388 @@
+.mentor-button-hover-effect-1,
+.mentor-button-hover-effect-2,
+.mentor-button-hover-effect-3,
+.mentor-button-hover-effect-4,
+.mentor-button-hover-effect-5,
+.mentor-button-hover-effect-6,
+.mentor-button-hover-effect-7,
+.mentor-button-hover-effect-8,
+.mentor-button-hover-effect-9,
+.mentor-button-hover-effect-10,
+.mentor-button-hover-effect-11,
+.mentor-button-hover-effect-12,
+.mentor-button-hover-effect-13,
+.mentor-button-hover-effect-14,
+.mentor-button-hover-effect-15,
+.mentor-button-hover-effect-16,
+.mentor-button-hover-effect-17,
+.mentor-button-hover-effect-18,
+.mentor-button-hover-effect-19,
+.mentor-button-hover-effect-20,
+.mentor-button-hover-effect-21,
+.mentor-button-hover-effect-22,
+.mentor-button-hover-effect-23,
+.mentor-button-hover-effect-24,
+.mentor-button-hover-effect-25,
+.mentor-button-hover-effect-26,
+.mentor-button-hover-effect-27,
+.mentor-button-hover-effect-28,
+.mentor-button-hover-effect-29,
+.mentor-button-hover-effect-30 {
+	position: relative;
+	background: none;
+	border: 4px solid #d30c5c;
+	z-index: 10;
+	transition: 0.8s;
+  overflow: hidden;
+}
+.mentor-button-hover-effect-16,
+.mentor-button-hover-effect-17 {
+    background-color: #d30c5c;
+}
+
+
+.mentor-button-hover-effect-4,  
+.mentor-button-hover-effect-5,  
+.mentor-button-hover-effect-6,  
+.mentor-button-hover-effect-7,
+.mentor-button-hover-effect-10,
+.mentor-button-hover-effect-11,
+.mentor-button-hover-effect-12,
+.mentor-button-hover-effect-13,
+.mentor-button-hover-effect-16,
+.mentor-button-hover-effect-17,
+.mentor-button-hover-effect-18,
+.mentor-button-hover-effect-19 {
+	border:none;
+} 
+
+
+
+.mentor-button-hover-effect-1:before,
+.mentor-button-hover-effect-1:after {
+    position: absolute;
+    content: "";
+    height: 6px;
+    width: 14px;
+    background: #222;
+    transform: skew(50deg);
+    transition: 0.8s;
+    z-index: 10;
+  }
+.mentor-button-hover-effect-1:before {
+    top: -5px;
+    left: 10%;
+  }
+.mentor-button-hover-effect-1:after {
+    bottom: -5px;
+    right: 10%;
+  }
+.mentor-button-hover-effect-1:hover::before {
+    left: 70%;
+  }
+.mentor-button-hover-effect-1:hover::after {
+    right: 70%;
+  }
+.mentor-button-hover-effect-2 {
+	border-radius: 0 50px 50px 0;
+}
+.mentor-button-hover-effect-3 {
+	border-radius: 50px 0 0 50px;
+}
+
+ 
+
+.mentor-button-hover-effect-4:after,
+.mentor-button-hover-effect-5:after,
+.mentor-button-hover-effect-6:after,
+.mentor-button-hover-effect-7:after{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4%;
+  content: '';
+  background: #D30C5C;
+  height: 100%;
+  transition: .8s;
+}
+.mentor-button-hover-effect-5::after {
+	left: auto;
+	right: 0;
+}
+.mentor-button-hover-effect-4:hover:after,
+.mentor-button-hover-effect-5:hover:after {
+  width: 100%;
+  z-index: -1;
+}
+
+.mentor-button-hover-effect-6:after {
+  width: 100%;
+  z-index: -1;
+  height: 8%;
+}
+.mentor-button-hover-effect-6:hover::after {
+  height: 100%;
+}
+
+.mentor-button-hover-effect-7:after {
+  width: 100%;
+  height: 8%;
+  bottom: 0;
+  top: auto;
+}
+.mentor-button-hover-effect-7:hover::after {
+  height: 100%;
+  z-index: -1;
+}
+
+.mentor-button-hover-effect-8:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #D30C5C;
+  z-index: -1;
+  transform: scale(.5);
+  transition: .8s;
+  opacity: 0;
+  visibility: hidden;
+}
+.mentor-button-hover-effect-8:hover:before {
+  opacity: 1;
+  visibility: visible;
+  transform: rotate(180deg);
+}
+
+
+
+.mentor-button-hover-effect-9 {
+  background: none;
+  border: 4px solid #D30C5C;
+  position: relative;
+  z-index: 1;
+}
+.mentor-button-hover-effect-9:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #D30C5C;
+  z-index: -1;
+  transform: scale(0.6);
+  opacity: 0;
+  visibility: hidden;
+  transition: .8s;
+}
+.mentor-button-hover-effect-9:hover:after {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+
+.mentor-button-hover-effect-10:before,
+.mentor-button-hover-effect-11:after,
+.mentor-button-hover-effect-12:after,
+.mentor-button-hover-effect-13:after {
+  left: 0;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background: #D30C5C;
+  position: absolute;
+  content: "";
+  z-index: -1;
+  border-radius: 0 50px 50px 0;
+  transition: .8s;
+}
+.mentor-button-hover-effect-11::after,
+.mentor-button-hover-effect-13::after {
+	left: auto;
+	right: 0;
+	border-radius: 50px 0 0 50px;
+}
+
+.mentor-button-hover-effect-12:after,
+.mentor-button-hover-effect-13:after {
+  width: 5%;
+  border-radius: 0;
+}
+.mentor-button-hover-effect-12:hover:after {
+  border-radius: 0 50px 50px 0;
+}
+.mentor-button-hover-effect-13:hover::after {
+	border-radius: 50px 0 0 50px;
+}
+.mentor-button-hover-effect-10:hover::before,
+.mentor-button-hover-effect-11:hover::after,
+.mentor-button-hover-effect-12:hover::after,
+.mentor-button-hover-effect-13:hover::after {
+  width: 100%;
+}
+
+.mentor-button-hover-effect-14 {
+  padding: 10px 22px 10px 22px;
+  transition: .8s;
+}
+.mentor-button-hover-effect-14:hover {
+  padding: 4px 12px 4px 12px;
+}
+.mentor-button-hover-effect-15 {
+  padding: 4px 12px 4px 12px;
+  transition: .8s;
+}
+.mentor-button-hover-effect-15:hover {
+  padding: 10px 22px 10px 22px;
+}
+
+.mentor-button-hover-effect-16:before,
+.mentor-button-hover-effect-17:before {
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  background: rgba(210,12,96,0.5);
+  width: 100%;
+  height: 100%;
+  content: "";
+  z-index: -1;
+  transition: .8s;
+}
+.mentor-button-hover-effect-16:hover,
+.mentor-button-hover-effect-17:hover {
+  padding: 5px 10px 5px 10px;
+}
+.mentor-button-hover-effect-16:hover:before {
+  top: 5px;
+  left: 5px;
+}
+
+.mentor-button-hover-effect-17::before {
+	left: 5px;
+	top: 5px;
+}
+
+.mentor-button-hover-effect-17:hover::before {
+  top: -5px;
+  left: -5px;
+}
+
+.mentor-button-hover-effect-18:before,
+.mentor-button-hover-effect-19:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  width: 4%;
+  height: 100%;
+  border: 4px solid #D30C5C;
+  transition: .8s;
+}
+.mentor-button-hover-effect-19:before {
+  left: auto;
+  right: 0;
+}
+.mentor-button-hover-effect-18:hover::before,
+.mentor-button-hover-effect-19:hover::before {
+  width: 100%;
+  border-radius: 0 50px 50px 0;
+}
+.mentor-button-hover-effect-19:hover::before {
+  border-radius: 50px 0 0 50px;
+}
+
+.mentor-button-hover-effect-20:hover {
+  color: #D30C5E;
+  border-color: #fff;
+}
+.mentor-button-hover-effect-20:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: white;
+  width: 30%;
+  height: 100%;
+  margin: 0 auto;
+  transform: rotate(45deg);
+  transition: .8s;
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+}
+.mentor-button-hover-effect-20:hover::before {
+  transform: rotate(0);
+  width: 100%;
+  opacity: 1;
+  visibility: visible;
+}
+
+
+.mentor-button-hover-effect-21:before,
+.mentor-button-hover-effect-22:before, 
+.mentor-button-hover-effect-23:before, 
+.mentor-button-hover-effect-24:before 
+{
+  position: absolute;
+  left: -4px;
+  top: -4px;
+  width: 20px;
+  height: 20px;
+  content: "";
+  background: #D30C5E;
+  border-radius: 50%;
+  transition: .8s;
+  z-index: -1;
+}
+
+
+
+.mentor-button-hover-effect-21:hover::before, 
+.mentor-button-hover-effect-22:hover::before, 
+.mentor-button-hover-effect-23:hover::before, 
+.mentor-button-hover-effect-24:hover::before 
+{
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  left: 0;
+  top: 0;
+}
+
+.mentor-button-hover-effect-22::before {
+  left: auto;
+  right: -4px;
+}
+
+.mentor-button-hover-effect-22:hover::before {
+  right: 0;
+  left: auto;
+}
+
+.mentor-button-hover-effect-23::before {
+  top: auto;
+  bottom: -4px
+}
+.mentor-button-hover-effect-23:hover::before {
+  top: auto;
+  bottom: 0;
+}
+
+.mentor-button-hover-effect-24::before {
+  left: auto;
+  right: -4px;
+  top: auto;
+  bottom: -4px;
+
+}
+
+.mentor-button-hover-effect-24:hover::before{
+  left: auto;
+  right: 0;
+  top: auto;
+  bottom: 0;
+} 
