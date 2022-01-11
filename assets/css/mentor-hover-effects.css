@@ -1,51 +1,17 @@
-.mentor-button-hover-effect-1,
-.osteo-border-right,
-.osteo-border-left,
-.osteo-background-right,
-.osteo-background-left,
-.osteo-background-bottom,
+.osteo-border-transform,
 .osteo-background-top,
+.osteo-background-right,
+.osteo-background-bottom,
+.osteo-background-left,
 .osteo-rotate-rectangle,
+.osteo-rotate-rectangle-in,
 .osteo-rectangle-out,
-.osteo-background-right-round,
-.osteo-background-left-round,
-.osteo-shrink-left,
-.osteo-shrink-right,
-.osteo-shrink-shadow-left,
-.osteo-shrink-shadow-right,
-.mentor-button-hover-effect-18,
-.mentor-button-hover-effect-19,
-.mentor-button-hover-effect-20,
-.mentor-button-hover-effect-21,
-.mentor-button-hover-effect-22,
-.mentor-button-hover-effect-23,
-.mentor-button-hover-effect-24,
-.mentor-button-hover-effect-25,
-.mentor-button-hover-effect-26,
-.mentor-button-hover-effect-27,
-.mentor-button-hover-effect-28,
-.mentor-button-hover-effect-29,
-.mentor-button-hover-effect-30,
-.mentor-button-hover-effect-31,
-.mentor-button-hover-effect-32,
-.mentor-button-hover-effect-33,
-.mentor-button-hover-effect-34,
-.mentor-button-hover-effect-35,
-.mentor-button-hover-effect-36,
-.mentor-button-hover-effect-37,
-.mentor-button-hover-effect-38,
-.mentor-button-hover-effect-39,
-.mentor-button-hover-effect-40,
-.mentor-button-hover-effect-41,
-.mentor-button-hover-effect-42,
-.mentor-button-hover-effect-43,
-.mentor-button-hover-effect-44,
-.mentor-button-hover-effect-45,
-.mentor-button-hover-effect-46,
-.mentor-button-hover-effect-47,
-.mentor-button-hover-effect-48,
-.mentor-button-hover-effect-49,
-.mentor-button-hover-effect-40 {
+.osteo-rectangle-in,
+.osteo-pointer-top-left,
+.osteo-pointer-top-right,
+.osteo-pointer-bottom-left,
+.osteo-pointer-bottom-right,
+.osteo-ripple-out {
     position: relative;
     background: none;
     border: 4px solid #d30c5c;
@@ -53,26 +19,8 @@
     transition: 0.8s;
 }
 
-.osteo-shrink-shadow-left,
-.osteo-shrink-shadow-right {
-    background-color: #d30c5c;
-}
-
-.osteo-background-right,
-.osteo-background-left,
-.osteo-background-bottom,
-.osteo-background-top,
-.osteo-background-right-round,
-.osteo-background-left-round,
-.osteo-shrink-shadow-left,
-.osteo-shrink-shadow-right,
-.mentor-button-hover-effect-18,
-.mentor-button-hover-effect-19 {
-    border: none;
-}
-
-.mentor-button-hover-effect-1:before,
-.mentor-button-hover-effect-1:after {
+.osteo-border-transform:before,
+.osteo-border-transform:after {
     position: absolute;
     content: "";
     height: 6px;
@@ -83,36 +31,28 @@
     z-index: 10;
 }
 
-.mentor-button-hover-effect-1:before {
+.osteo-border-transform:before {
     top: -5px;
     left: 10%;
 }
 
-.mentor-button-hover-effect-1:after {
+.osteo-border-transform:after {
     bottom: -5px;
     right: 10%;
 }
 
-.mentor-button-hover-effect-1:hover::before {
+.osteo-border-transform:hover::before {
     left: 70%;
 }
 
-.mentor-button-hover-effect-1:hover::after {
+.osteo-border-transform:hover::after {
     right: 70%;
 }
 
-.osteo-border-right {
-    border-radius: 0 50px 50px 0;
-}
-
-.osteo-border-left {
-    border-radius: 50px 0 0 50px;
-}
-
+.osteo-background-top:after,
 .osteo-background-right:after,
 .osteo-background-left:after,
-.osteo-background-bottom:after,
-.osteo-background-top:after {
+.osteo-background-bottom:after {
     position: absolute;
     left: 0;
     top: 0;
@@ -123,9 +63,16 @@
     transition: .8s;
 }
 
-.osteo-background-left::after {
-    left: auto;
-    right: 0;
+.osteo-background-top:after {
+    width: 100%;
+    height: 8%;
+    bottom: 0;
+    top: auto;
+}
+
+.osteo-background-top:hover::after {
+    height: 100%;
+    z-index: -1;
 }
 
 .osteo-background-right:hover:after,
@@ -144,16 +91,9 @@
     height: 100%;
 }
 
-.osteo-background-top:after {
-    width: 100%;
-    height: 8%;
-    bottom: 0;
-    top: auto;
-}
-
-.osteo-background-top:hover::after {
-    height: 100%;
-    z-index: -1;
+.osteo-background-left::after {
+    left: auto;
+    right: 0;
 }
 
 .osteo-rotate-rectangle:before {
@@ -175,6 +115,36 @@
     opacity: 1;
     visibility: visible;
     transform: rotate(180deg);
+}
+
+.osteo-rotate-rectangle-in:hover {
+    color: #D30C5E;
+    border-color: #fff;
+}
+
+.osteo-rotate-rectangle-in:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: white;
+    width: 30%;
+    height: 100%;
+    margin: 0 auto;
+    transform: rotate(45deg);
+    transition: .8s;
+    z-index: -1;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.osteo-rotate-rectangle-in:hover::before {
+    transform: rotate(0);
+    width: 100%;
+    opacity: 1;
+    visibility: visible;
 }
 
 .osteo-rectangle-out {
@@ -205,157 +175,35 @@
     transform: scale(1);
 }
 
-.osteo-background-right-round:after,
-.osteo-background-left-round:after {
-    left: 0;
-    top: 0;
-    width: 0;
-    height: 100%;
-    background: #D30C5C;
+.osteo-rectangle-in:hover::after {
+    transform: scale(0);
+}
+
+.osteo-rectangle-in:before,
+.osteo-rectangle-in:after {
+    content: '';
     position: absolute;
-    content: "";
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    background: #222;
     z-index: -1;
-    border-radius: 0 50px 50px 0;
-    transition: .8s;
+    transition: 0.3s;
 }
 
-.osteo-background-left-round::after {
-    left: auto;
-    right: 0;
-    border-radius: 50px 0 0 50px;
-}
-
-.osteo-background-right-round:after,
-.osteo-background-left-round:after {
-    width: 5%;
-    border-radius: 0;
-}
-
-.osteo-background-right-round:hover:after {
-    border-radius: 0 50px 50px 0;
-}
-
-.osteo-background-left-round:hover::after {
-    border-radius: 50px 0 0 50px;
-}
-
-.osteo-background-right-round:hover::after,
-.osteo-background-left-round:hover::after {
-    width: 100%;
-}
-
-.osteo-shrink-left {
-    padding: 10px 22px 10px 22px;
-    transition: .8s;
-}
-
-.osteo-shrink-left:hover {
-    padding: 4px 12px 4px 12px;
-}
-
-.osteo-shrink-right {
-    padding: 4px 12px 4px 12px;
-    transition: .8s;
-}
-
-.osteo-shrink-right:hover {
-    padding: 10px 22px 10px 22px;
-}
-
-.osteo-shrink-shadow-left:before,
-.osteo-shrink-shadow-right:before {
-    position: absolute;
-    left: -5px;
-    top: -5px;
-    background: rgba(210, 12, 96, 0.5);
-    width: 100%;
-    height: 100%;
-    content: "";
-    z-index: -1;
-    transition: .8s;
-}
-
-.osteo-shrink-shadow-left:hover,
-.osteo-shrink-shadow-right:hover {
-    padding: 5px 10px 5px 10px;
-}
-
-.osteo-shrink-shadow-left:hover:before {
-    top: 5px;
-    left: 5px;
-}
-
-.osteo-shrink-shadow-right::before {
-    left: 5px;
-    top: 5px;
-}
-
-.osteo-shrink-shadow-right:hover::before {
-    top: -5px;
-    left: -5px;
-}
-
-.mentor-button-hover-effect-18:before,
-.mentor-button-hover-effect-19:before {
-    position: absolute;
-    left: 0;
+.osteo-rectangle-in:before {
     top: 0;
-    content: "";
-    width: 4%;
-    height: 100%;
-    border: 4px solid #D30C5C;
-    transition: .8s;
-}
-
-.mentor-button-hover-effect-19:before {
-    left: auto;
-    right: 0;
-}
-
-.mentor-button-hover-effect-18:hover::before,
-.mentor-button-hover-effect-19:hover::before {
-    width: 100%;
-    border-radius: 0 50px 50px 0;
-}
-
-.mentor-button-hover-effect-19:hover::before {
-    border-radius: 50px 0 0 50px;
-}
-
-.mentor-button-hover-effect-20:hover {
-    color: #D30C5E;
-    border-color: #fff;
-}
-
-.mentor-button-hover-effect-20:before {
-    position: absolute;
-    content: "";
     left: 0;
     right: 0;
-    top: 0;
-    bottom: 0;
-    background: white;
-    width: 30%;
-    height: 100%;
-    margin: 0 auto;
-    transform: rotate(45deg);
-    transition: .8s;
-    z-index: -1;
-    opacity: 0;
-    visibility: hidden;
+    bottom: 0px;
+    background: #D30C5E;
 }
 
-.mentor-button-hover-effect-20:hover::before {
-    transform: rotate(0);
-    width: 100%;
-    opacity: 1;
-    visibility: visible;
-}
-
-.mentor-button-hover-effect-21:before,
-.mentor-button-hover-effect-22:before,
-.mentor-button-hover-effect-23:before,
-.mentor-button-hover-effect-24:before {
+.osteo-pointer-top-left:before,
+.osteo-pointer-top-right:before,
+.osteo-pointer-bottom-left:before,
+.osteo-pointer-bottom-right:before {
     position: absolute;
     left: -4px;
     top: -4px;
@@ -368,10 +216,10 @@
     z-index: -1;
 }
 
-.mentor-button-hover-effect-21:hover::before,
-.mentor-button-hover-effect-22:hover::before,
-.mentor-button-hover-effect-23:hover::before,
-.mentor-button-hover-effect-24:hover::before {
+.osteo-pointer-top-left:hover::before,
+.osteo-pointer-top-right:hover::before,
+.osteo-pointer-bottom-left:hover::before,
+.osteo-pointer-bottom-right:hover::before {
     width: 100%;
     height: 100%;
     border-radius: 0;
@@ -379,661 +227,63 @@
     top: 0;
 }
 
-.mentor-button-hover-effect-22::before {
+.osteo-pointer-top-right::before {
     left: auto;
     right: -4px;
 }
 
-.mentor-button-hover-effect-22:hover::before {
+.osteo-pointer-top-right:hover::before {
     right: 0;
     left: auto;
 }
 
-.mentor-button-hover-effect-23::before {
+.osteo-pointer-bottom-left::before {
     top: auto;
     bottom: -4px
 }
 
-.mentor-button-hover-effect-23:hover::before {
+.osteo-pointer-bottom-left:hover::before {
     top: auto;
     bottom: 0;
 }
 
-.mentor-button-hover-effect-24::before {
+.osteo-pointer-bottom-right::before {
     left: auto;
     right: -4px;
     top: auto;
     bottom: -4px;
 }
 
-.mentor-button-hover-effect-24:hover::before {
+.osteo-pointer-bottom-right:hover::before {
     left: auto;
     right: 0;
     top: auto;
     bottom: 0;
 }
 
-.mentor-button-hover-effect-25,
-.mentor-button-hover-effect-26,
-.mentor-button-hover-effect-27,
-.mentor-button-hover-effect-28,
-.mentor-button-hover-effect-29,
-.mentor-button-hover-effect-30,
-.mentor-button-hover-effect-31,
-.mentor-button-hover-effect-32,
-.mentor-button-hover-effect-33,
-.mentor-button-hover-effect-34,
-.mentor-button-hover-effect-35,
-.mentor-button-hover-effect-36,
-.mentor-button-hover-effect-37,
-.mentor-button-hover-effect-38,
-.mentor-button-hover-effect-39,
-.mentor-button-hover-effect-40,
-.mentor-button-hover-effect-41,
-.mentor-button-hover-effect-42,
-.mentor-button-hover-effect-43,
-.mentor-button-hover-effect-44,
-.mentor-button-hover-effect-45,
-.mentor-button-hover-effect-46,
-.mentor-button-hover-effect-47,
-.mentor-button-hover-effect-48,
-.mentor-button-hover-effect-49,
-.mentor-button-hover-effect-50 {
-    border: unset;
-    outline: unset;
-    text-decoration: unset;
-    text-align: center;
-}
-
-.mentor-button-hover-effect-25::before,
-.mentor-button-hover-effect-25::after {
+.osteo-ripple-out:before,
+.osteo-ripple-out:after {
     content: '';
-    --corner: 10px;
-    background: #D30C5E;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
     position: absolute;
-    z-index: -1;
-    transition: 0.25s;
-    clip-path: polygon(var(--corner) 0%, 100% 0, 100% calc(100% - var(--corner)), calc(100% - var(--corner)) 100%, 0 100%, 0 var(--corner));
-}
-
-.mentor-button-hover-effect-25:hover::before {
-    background: #bfbfbf;
-    top: 3px;
-    left: 3px;
-}
-
-.mentor-button-hover-effect-26::after,
-.mentor-button-hover-effect-26::before {
-    content: '';
-    --corner: 13px;
-    background: #D30C5E;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    z-index: -1;
-    transition: 0.25s;
-    clip-path: polygon(0 0, calc(100% - var(--corner)) 0%, 100% var(--corner), 100% 100%, var(--corner) 100%, 0 calc(100% - var(--corner)));
-}
-
-.mentor-button-hover-effect-26:hover::before {
-    background: #bfbfbf;
-    top: 3px;
-    left: -3px;
-}
-
-.mentor-button-hover-effect-27:after,
-.mentor-button-hover-effect-27:before {
-    content: '';
-    --corner: 10px;
+    top: 2px;
+    bottom: 2px;
+    left: 2px;
+    right: 2px;
     background: #222;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
     z-index: -1;
-    clip-path: polygon(var(--corner) 0%, 100% 0, 100% calc(100% - var(--corner)), calc(100% - var(--corner)) 100%, 0 100%, 0 var(--corner));
 }
 
-.mentor-button-hover-effect-27:before {
-    top: -4.2px;
-    left: -4.2px;
-    right: -4.2px;
-    bottom: -4.2px;
+.osteo-ripple-out:before {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     background: #D30C5E;
 }
 
-.mentor-button-hover-effect-27:hover:after,
-.mentor-button-hover-effect-28:hover:after,
-.mentor-button-hover-effect-45:hover:after,
-.mentor-button-hover-effect-46:hover:after,
-.mentor-button-hover-effect-47:hover:after {
+.osteo-ripple-out:hover:after {
     transition: 0.5s;
     background: #D30C5E;
     transform: scale(2);
     opacity: 0;
-}
-
-.mentor-button-hover-effect-28:after,
-.mentor-button-hover-effect-28:before {
-    content: '';
-    --corner: 10px;
-    background: #222;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;
-    clip-path: polygon(0 0, calc(100% - var(--corner)) 0%, 100% var(--corner), 100% 100%, var(--corner) 100%, 0 calc(100% - var(--corner)));
-}
-
-.mentor-button-hover-effect-28:before {
-    top: -4.2px;
-    left: -4.2px;
-    right: -4.2px;
-    bottom: -4.2px;
-    background: #D30C5E;
-}
-
-.mentor-button-hover-effect-29:before,
-.mentor-button-hover-effect-29:after,
-.mentor-button-hover-effect-33:before,
-.mentor-button-hover-effect-33:after {
-    --corner: 18px;
-    content: '';
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    right: 2px;
-    bottom: 2px;
-    background: #222;
-    clip-path: polygon(calc(100% - var(--corner)) 0, 100% var(--corner), 100% 100%, 0 100%, 0 0);
-    z-index: -1;
-    transition: 0.3s;
-}
-
-.mentor-button-hover-effect-29:before,
-.mentor-button-hover-effect-33:before {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0px;
-    background: #D30C5E;
-}
-
-.mentor-button-hover-effect-29:hover::after,
-.mentor-button-hover-effect-30:hover::after,
-.mentor-button-hover-effect-31:hover::after,
-.mentor-button-hover-effect-32:hover::after,
-.mentor-button-hover-effect-33:hover::after,
-.mentor-button-hover-effect-34:hover::after,
-.mentor-button-hover-effect-35:hover::after,
-.mentor-button-hover-effect-36:hover::after,
-.mentor-button-hover-effect-37:hover::after,
-.mentor-button-hover-effect-38:hover::after,
-.mentor-button-hover-effect-39:hover::after,
-.mentor-button-hover-effect-40:hover::after,
-.mentor-button-hover-effect-41:hover::after,
-.mentor-button-hover-effect-42:hover::after,
-.mentor-button-hover-effect-43:hover::after,
-.mentor-button-hover-effect-44:hover::after {
-    transform: scale(0);
-}
-
-.mentor-button-hover-effect-29 .design-helper:before,
-.mentor-button-hover-effect-30 .design-helper:before {
-    content: '';
-    position: absolute;
-    height: 100%;
-    left: -7px;
-    background: #D30C5E;
-    width: 5px;
-    top: 0;
-}
-
-.mentor-button-hover-effect-29 .design-helper:after {
-    content: '';
-    position: absolute;
-    height: 6px;
-    width: 22px;
-    background: #D30C5E;
-    clip-path: polygon(5px 0%, calc(100% - 5px) 0%, 100% 100%, 0% 100%);
-    transform: rotate(45deg);
-    top: 3px;
-    right: -6px;
-}
-
-.mentor-button-hover-effect-30:before,
-.mentor-button-hover-effect-30:after,
-.mentor-button-hover-effect-34:before,
-.mentor-button-hover-effect-34:after {
-    --corner: 18px;
-    content: '';
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    right: 2px;
-    bottom: 2px;
-    background: #222;
-    clip-path: polygon(100% 0, 100% calc(100% - var(--corner)), calc(100% - var(--corner)) 100%, 0 100%, 0 0);
-    z-index: -1;
-    transition: 0.3s;
-}
-
-.mentor-button-hover-effect-30:before,
-.mentor-button-hover-effect-34:before {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0px;
-    background: #D30C5E;
-}
-
-.mentor-button-hover-effect-30 .design-helper:after {
-    content: '';
-    position: absolute;
-    height: 6px;
-    width: 22px;
-    background: #D30C5E;
-    clip-path: polygon(5px 0%, calc(100% - 5px) 0%, 100% 100%, 0% 100%);
-    transform: rotate(135deg);
-    bottom: 3px;
-    right: -6px;
-}
-
-.mentor-button-hover-effect-31:before,
-.mentor-button-hover-effect-31:after,
-.mentor-button-hover-effect-35:before,
-.mentor-button-hover-effect-35:after {
-    --corner: 18px;
-    content: '';
-    position: absolute;
-    top: 1px;
-    left: 1px;
-    right: 1px;
-    bottom: 1px;
-    background: #222;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, var(--corner) 100%, 0 calc(100% - var(--corner)));
-    z-index: -1;
-    transition: 0.3s;
-}
-
-.mentor-button-hover-effect-31:before,
-.mentor-button-hover-effect-35:before {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0px;
-    background: #D30C5E;
-}
-
-.mentor-button-hover-effect-31 .design-helper:before {
-    content: '';
-    position: absolute;
-    height: 100%;
-    right: -7px;
-    background: #D30C5E;
-    width: 5px;
-    top: 0;
-}
-
-.mentor-button-hover-effect-31 .design-helper:after {
-    content: '';
-    position: absolute;
-    height: 6px;
-    width: 22px;
-    background: #D30C5E;
-    clip-path: polygon(5px 0%, calc(100% - 5px) 0%, 100% 100%, 0% 100%);
-    transform: rotate(-135deg);
-    bottom: 3px;
-    left: -6px;
-}
-
-.mentor-button-hover-effect-32:before,
-.mentor-button-hover-effect-32:after,
-.mentor-button-hover-effect-36:before,
-.mentor-button-hover-effect-36:after {
-    --corner: 18px;
-    content: '';
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    right: 2px;
-    bottom: 2px;
-    background: #222;
-    clip-path: polygon(var(--corner) 0, 100% 0, 100% 100%, 0 100%, 0 var(--corner));
-    z-index: -1;
-    transition: 0.3s;
-}
-
-.mentor-button-hover-effect-32:before,
-.mentor-button-hover-effect-36:before {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0px;
-    background: #D30C5E;
-}
-
-.mentor-button-hover-effect-32 .design-helper:before {
-    content: '';
-    position: absolute;
-    height: 100%;
-    right: -7px;
-    background: #D30C5E;
-    width: 5px;
-    top: 0;
-}
-
-.mentor-button-hover-effect-32 .design-helper:after {
-    --corner: 15px;
-    content: '';
-    position: absolute;
-    height: 6px;
-    width: 22px;
-    background: #D30C5E;
-    clip-path: polygon(5px 0%, calc(100% - 5px) 0%, 100% 100%, 0% 100%);
-    transform: rotate(-45deg);
-    top: 3px;
-    left: -5px;
-}
-
-.mentor-button-hover-effect-37:before,
-.mentor-button-hover-effect-37:after,
-.mentor-button-hover-effect-41:before,
-.mentor-button-hover-effect-41:after {
-    --corner: 18px;
-    content: '';
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    right: 2px;
-    bottom: 2px;
-    background: #222;
-    z-index: -1;
-    transition: 0.3s;
-    clip-path: polygon(var(--corner) 0%, 100% 0%, 100% var(--corner), 100% calc(100% - var(--corner)), calc(100% - var(--corner)) 100%, var(--corner) 100%, 0% 100%, 0% var(--corner));
-}
-
-.mentor-button-hover-effect-37:before,
-.mentor-button-hover-effect-41:before {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0px;
-    background: #D30C5E;
-}
-
-.mentor-button-hover-effect-37 .design-helper:before,
-.mentor-button-hover-effect-37 .design-helper:after {
-    content: '';
-    position: absolute;
-    height: 6px;
-    width: 22px;
-    background: #D30C5E;
-    clip-path: polygon(5px 0%, calc(100% - 5px) 0%, 100% 100%, 0% 100%);
-    transform: rotate(45deg);
-    top: 3px;
-    right: -6px;
-}
-
-.mentor-button-hover-effect-37 .design-helper:before {
-    right: unset;
-    left: -5px;
-    transform: rotate(-45deg);
-}
-
-.mentor-button-hover-effect-37 .design-helper:after {
-    top: unset;
-    bottom: 3px;
-    transform: rotate(135deg);
-}
-
-.mentor-button-hover-effect-38:before,
-.mentor-button-hover-effect-38:after,
-.mentor-button-hover-effect-42:before,
-.mentor-button-hover-effect-42:after {
-    --corner: 15px;
-    content: '';
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    right: 2px;
-    bottom: 2px;
-    background: #222;
-    z-index: -1;
-    transition: 0.3s;
-    clip-path: polygon(0% 0%, calc(100% - var(--corner)) 0%, 100% var(--corner), 100% 100%, calc(100% - var(--corner)) 100%, var(--corner) 100%, 0% calc(100% - var(--corner)), 0% var(--corner));
-}
-
-.mentor-button-hover-effect-38:before,
-.mentor-button-hover-effect-42:before {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0px;
-    background: #D30C5E;
-}
-
-.mentor-button-hover-effect-38 .design-helper:after,
-.mentor-button-hover-effect-38 .design-helper:before {
-    content: '';
-    position: absolute;
-    height: 5px;
-    width: 20px;
-    background: #D30C5E;
-    clip-path: polygon(5px 0%, calc(100% - 5px) 0%, 100% 100%, 0% 100%);
-    transform: rotate(45deg);
-    top: 2px;
-    right: -5px;
-}
-
-.mentor-button-hover-effect-38 .design-helper:after {
-    top: unset;
-    bottom: 2px;
-    left: -5px;
-    transform: rotate(-135deg);
-}
-
-.mentor-button-hover-effect-39:before,
-.mentor-button-hover-effect-39:after,
-.mentor-button-hover-effect-43:before,
-.mentor-button-hover-effect-43:after {
-    --corner: 15px;
-    content: '';
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    right: 2px;
-    bottom: 2px;
-    background: #222;
-    z-index: -1;
-    transition: 0.3s;
-    clip-path: polygon(var(--corner) 0%, calc(100% - var(--corner)) 0%, 100% var(--corner), 100% 100%, 0 100%, 0 var(--corner));
-}
-
-.mentor-button-hover-effect-39:before,
-.mentor-button-hover-effect-43:before {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0px;
-    background: #D30C5E;
-}
-
-.mentor-button-hover-effect-39 .design-helper:after,
-.mentor-button-hover-effect-39 .design-helper:before {
-    content: '';
-    position: absolute;
-    height: 5px;
-    width: 20px;
-    background: #D30C5E;
-    clip-path: polygon(5px 0%, calc(100% - 5px) 0%, 100% 100%, 0% 100%);
-    transform: rotate(45deg);
-    top: 2px;
-    right: -5px;
-}
-
-.mentor-button-hover-effect-39 .design-helper:after {
-    left: -5px;
-    transform: rotate(-45deg);
-}
-
-.mentor-button-hover-effect-40:before,
-.mentor-button-hover-effect-40:after,
-.mentor-button-hover-effect-44:before,
-.mentor-button-hover-effect-44:after {
-    --corner: 15px;
-    content: '';
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    right: 2px;
-    bottom: 2px;
-    background: #222;
-    z-index: -1;
-    transition: 0.3s;
-    clip-path: polygon(0 0, 100% 0, 100% calc(100% - var(--corner)), calc(100% - var(--corner)) 100%, var(--corner) 100%, 0 calc(100% - var(--corner)));
-}
-
-.mentor-button-hover-effect-40:before,
-.mentor-button-hover-effect-44:before {
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0px;
-    background: #D30C5E;
-}
-
-.mentor-button-hover-effect-40 .design-helper:after,
-.mentor-button-hover-effect-40 .design-helper:before {
-    content: '';
-    position: absolute;
-    height: 5px;
-    width: 20px;
-    background: #D30C5E;
-    clip-path: polygon(5px 0%, calc(100% - 5px) 0%, 100% 100%, 0% 100%);
-    transform: rotate(135deg);
-    bottom: 2px;
-    right: -5px;
-}
-
-.mentor-button-hover-effect-40 .design-helper:after {
-    left: -5px;
-    transform: rotate(-135deg);
-}
-
-.mentor-button-hover-effect-45:before,
-.mentor-button-hover-effect-45:after,
-.mentor-button-hover-effect-46:before,
-.mentor-button-hover-effect-46:after,
-.mentor-button-hover-effect-47:before,
-.mentor-button-hover-effect-47:after {
-    --corner: 4px;
-    content: '';
-    position: absolute;
-    top: 2px;
-    bottom: 2px;
-    left: 2px;
-    right: 2px;
-    background: #222;
-    clip-path: polygon(var(--corner) 0%, calc(100% - var(--corner)) 0%, 100% var(--corner), 100% calc(100% - var(--corner)), calc(100% - var(--corner)) 100%, var(--corner) 100%, 0% calc(100% - var(--corner)), 0% var(--corner));
-    z-index: -1;
-}
-
-.mentor-button-hover-effect-45:before,
-.mentor-button-hover-effect-46:before,
-.mentor-button-hover-effect-47:before {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: #D30C5E;
-}
-
-.mentor-button-hover-effect-45 .design-helper:before,
-.mentor-button-hover-effect-45 .design-helper::after,
-.mentor-button-hover-effect-45 .design-helper-2:before,
-.mentor-button-hover-effect-45 .design-helper-2::after {
-    --corner: 4px;
-    content: '';
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    background: #D30C5E;
-    top: -2px;
-    left: -2px;
-    z-index: -1;
-    -webkit-clip-path: polygon(var(--corner) 0%, calc(100% - var(--corner)) 0%, 100% var(--corner), 100% calc(100% - var(--corner)), calc(100% - var(--corner)) 100%, var(--corner) 100%, 0% calc(100% - var(--corner)), 0% var(--corner));
-    clip-path: polygon(var(--corner) 0%, calc(100% - var(--corner)) 0%, 100% var(--corner), 100% calc(100% - var(--corner)), calc(100% - var(--corner)) 100%, var(--corner) 100%, 0% calc(100% - var(--corner)), 0% var(--corner));
-}
-
-.mentor-button-hover-effect-45 .design-helper::after {
-    left: unset;
-    right: -2px;
-}
-
-.mentor-button-hover-effect-45 .design-helper-2::before {
-    bottom: -2px;
-    top: unset;
-}
-
-.mentor-button-hover-effect-45 .design-helper-2::after {
-    top: unset;
-    bottom: -2px;
-    right: -2px;
-    left: unset;
-}
-
-.mentor-button-hover-effect-47 .design-helper:before,
-.mentor-button-hover-effect-47 .design-helper:after,
-.mentor-button-hover-effect-47 .design-helper-2:before,
-.mentor-button-hover-effect-47 .design-helper-2:after {
-    --corner: 4px;
-    content: '';
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    background: #D30C5E;
-    top: -3px;
-    left: -3px;
-    z-index: -1;
-    -webkit-clip-path: polygon(var(--corner) 0%, calc(100% - var(--corner)) 0%, 100% var(--corner), 100% calc(100% - var(--corner)), calc(100% - var(--corner)) 100%, var(--corner) 100%, 0% calc(100% - var(--corner)), 0% var(--corner));
-    clip-path: polygon(var(--corner) 0%, calc(100% - var(--corner)) 0%, 100% var(--corner), 100% calc(100% - var(--corner)), calc(100% - var(--corner)) 100%, var(--corner) 100%, 0% calc(100% - var(--corner)), 0% var(--corner));
-}
-
-.mentor-button-hover-effect-47 .design-helper:after {
-    left: unset;
-    right: -3px;
-}
-
-.mentor-button-hover-effect-47 .design-helper-2:before {
-    bottom: -3px;
-    top: unset;
-}
-
-.mentor-button-hover-effect-47 .design-helper-2:after {
-    top: unset;
-    bottom: -3px;
-    right: -3px;
-    left: unset;
-}
-
-.mentor-button-hover-effect-48 {
-    transition: 0.3s;
-    background: #D30C5E;
-    border: 4px solid #D30C5E;
-    box-shadow: inset 0 0 0 2px white;
-}
-
-.mentor-button-hover-effect-48:hover {
-    color: #D30C5E;
-    background: white;
 }
